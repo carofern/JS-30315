@@ -6,7 +6,7 @@
 
 let price = parseInt(prompt('Ingresar precio:'));
 
-let askprice = (price) => {
+const askprice = (price) => {
     if ((price >= 1001) && (price <= 5000)) {
         alert('El precio es mayor a $1000');
         return price * 1.21;
