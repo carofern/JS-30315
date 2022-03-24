@@ -2,12 +2,19 @@
 const storeElements = localStorage.getItem('elements')
 let array = [];
 
+//Spread nose si aplique bien el Spread
+let arraySpread = [...array];
+console.log(arraySpread);
+
 console.log(localStorage.getItem('elements'));
 
 let getData = function () {
     const tiempoTotal = document.getElementById('ttHour').value;
     const distancia = document.getElementById('dist').value;
 
+    //Operador ternario
+    (distancia.trim()) && (tiempoTotal.trim()) ? array.push(tiempoTotal) : alert('Ingresa un dato')
+    
     if (distancia.trim() && tiempoTotal.trim()) {
         array.push(tiempoTotal);
         array.push(distancia);
@@ -19,6 +26,9 @@ let getData = function () {
         alert('Ingresa un dato')
     }
 }
+
+
+
 
 
 function mostrarUltimos() {
